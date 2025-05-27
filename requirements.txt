@@ -1,0 +1,17 @@
+# PrimeFlex Claim Estimator Requirements
+
+# Core Python packages (minimal setup for now)
+
+# Future enhancements might include:
+# Flask         # For building an API
+# pandas        # For spreadsheet/dataframe handling
+# openpyxl      # For .xlsx file support
+# PyPDF2        # For parsing PDFs
+# requests      # For API integration with Bubble.io or external systems
+
+# Example (uncomment as needed):
+# flask
+# pandas
+# openpyxl
+# PyPDF2
+# requests
