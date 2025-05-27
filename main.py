@@ -1,11 +1,8 @@
-def apply_op(base):
-    base += base * 0.10  # Overhead
-    base += base * 0.10  # Profit
-    return base
+# main.py
+from payout import calculate_payout
 
 summaries = []
 
-# Ask for deductible once
 try:
     deductible_input = input("Enter deductible amount: $")
     deductible = float(deductible_input)
@@ -25,8 +22,7 @@ while True:
 
     try:
         base_estimate = float(user_input)
-        adjusted = apply_op(base_estimate)
-        final_payout = adjusted - deductible
+        final_payout, adjusted = calculate_payout(base_estimate, deductible)
 
         summary = (
             f"Estimate: ${base_estimate:,.2f} | "
