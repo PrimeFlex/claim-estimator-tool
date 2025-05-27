@@ -15,9 +15,13 @@ while True:
 
     if user_input.lower() == "done":
         print("\n--- Claim Summary Report ---")
-        for s in summaries:
-            print(s)
-        print("\nAll claims processed.")
+        with open("claim_summary.txt", "w") as file:
+            file.write("--- Claim Summary Report ---\n")
+            for s in summaries:
+                print(s)
+                file.write(s + "\n")
+            file.write("\nAll claims processed.\n")
+        print("\nAll claims processed. Summary saved to claim_summary.txt")
         break
 
     try:
